@@ -1,0 +1,5 @@
+ebay-django
+*.pyc
+staticfiles
+.env
+.idea
