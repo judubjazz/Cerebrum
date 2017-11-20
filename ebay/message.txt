@@ -1,0 +1,4 @@
+Cher ${PERSON_NAME},
+Il y a un item disponible sur ebay qui pourrait vous intéresser:
+${ITEM}
+Merci Beaucoup!
