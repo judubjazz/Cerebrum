@@ -2,12 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b84f834f-c09d-42ff-98bc-4525f8247954" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/src/cute_ball_time.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/App.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/__tests__/index.android.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/__tests__/index.ios.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/config/router.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/message.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/screens/ActiveQueryScreen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/screens/AlertScreen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/screens/BuyScreen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/screens/HomeScreen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/screens/Login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/screens/ResultScreen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/screens/SellScreen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/app/screens/SplashScreen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ebay.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/index.android.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/index.ios.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp-tvOS/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp-tvOSTests/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp.xcodeproj/xcshareddata/xcschemes/myapp-tvOS.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp.xcodeproj/xcshareddata/xcschemes/myapp.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp/AppDelegate.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp/AppDelegate.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp/Base.lproj/LaunchScreen.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp/Images.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myapp/main.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myappTests/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ios/myappTests/myappTests.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/message.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/src/components/Container.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/src/components/Label.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/src/components/ModalPicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/src/components/MyButton.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/styles/styles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebay/ebay.py" afterPath="$PROJECT_DIR$/ebay/ebay.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebay/send_email.py" afterPath="$PROJECT_DIR$/ebay/send_email.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snippets/models.py" afterPath="$PROJECT_DIR$/snippets/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/settings.py" afterPath="$PROJECT_DIR$/tutorial/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,11 +83,9 @@
       <file leaf-file-name="ebay.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ebay/ebay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="57" column="50" lean-forward="false" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-778">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -622,11 +656,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ebay/ebay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="57" column="50" lean-forward="false" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-778">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

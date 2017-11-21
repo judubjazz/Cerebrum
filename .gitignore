@@ -1,4 +1,8 @@
 *.pyc
 staticfiles
-.env
-.idea
+.*
+!/.gitignore
+myapp/node_modules
+myapp/android
+myapp/__tests__
+myapp/ios
