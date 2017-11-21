@@ -1,4 +1,6 @@
-Cher ${PERSON_NAME},
-Il y a un item disponible sur ebay qui pourrait vous intéresser:
+Dear ${PERSON_NAME},
+There is an available item fitting with one of your queries:
 ${ITEM}
-Merci Beaucoup!
+click on this link to see the item
+${URL}
+Happy Shopping!

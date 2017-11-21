@@ -2,15 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b84f834f-c09d-42ff-98bc-4525f8247954" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ebay/ebay.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ebay/ebay.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ebay/message.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ebay/send_email.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/djangorest/db.sqlite3" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/db.sqlite3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/ebay.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/ebay/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/ebay/ebay.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/ebay/ebay.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/ebay/message.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/ebay/send_email.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/manage.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/apps.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/migrations/0002_snippet_email.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/migrations/0003_auto_20171119_0202.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/permissions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/serializers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/snippets/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/tutorial/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/tutorial/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/tutorial/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/tutorial/wsgi.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangorest/api/views.py" afterPath="$PROJECT_DIR$/djangorest/api/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangorest/djangorest/settings.py" afterPath="$PROJECT_DIR$/djangorest/djangorest/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebay/ebay.py" afterPath="$PROJECT_DIR$/ebay/ebay.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebay/message.txt" afterPath="$PROJECT_DIR$/ebay/message.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ebay/send_email.py" afterPath="$PROJECT_DIR$/ebay/send_email.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,98 +47,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangorest/api/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangorest/api/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="108" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="108" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangorest/api/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="21" column="42" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="21" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/djangorest/api/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangorest/api/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="58" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="11" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ebay.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ebay/ebay.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="48" column="82" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="82" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="send_email.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ebay/send_email.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-              <folding>
-                <element signature="e#25#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ebay.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ebay/ebay.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -148,7 +78,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="11" />
     <option name="y" value="13" />
     <option name="width" value="1437" />
@@ -176,22 +106,6 @@
             <path>
               <item name="reactapi" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactapi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactapi" type="462c0819:PsiDirectoryNode" />
-              <item name="djangorest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactapi" type="462c0819:PsiDirectoryNode" />
-              <item name="djangorest" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactapi" type="462c0819:PsiDirectoryNode" />
-              <item name="ebay" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -380,8 +294,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1602" height="868" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="0" width="1602" height="868" extended-state="7" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -389,8 +302,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3755047" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34051144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3063063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34051144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3108108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39569312" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -438,48 +351,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/settings.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/models.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/serializers.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/urls.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/urls.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/views.py" />
     <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/rest_framework/generics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3690">
@@ -487,20 +364,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/api/apps.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/views.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -529,36 +394,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/migrations/0002_auto_20171003_0616.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/migrations/0003_bucketlist_date_created.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/api/migrations/0002_auto_20171003_0616.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/migrations/0003_bucketlist_date_created.py" />
     <entry file="file://$PROJECT_DIR$/Procfile" />
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
-    <entry file="file://$PROJECT_DIR$/djangorest/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/requirements.txt" />
+    <entry file="file://$PROJECT_DIR$/djangorest/Procfile" />
     <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/django/utils/autoreload.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3210">
@@ -578,14 +419,7 @@
     <entry file="file://$PROJECT_DIR$/djangorest/ebay2/send_email.py" />
     <entry file="file://$PROJECT_DIR$/djangorest/ebay2/ebay.py" />
     <entry file="file://$PROJECT_DIR$/djangorest/ebay/ebay.py" />
-    <entry file="file://$PROJECT_DIR$/djangorest/ebay.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/ebay.yaml" />
     <entry file="file:///usr/local/lib/python2.7/dist-packages/ebaysdk-2.1.4-py2.7.egg/ebaysdk/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -607,62 +441,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/manage.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/apps.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/migrations/0001_initial.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/wsgi.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/urls.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/djangorest/settings.py" />
     <entry file="file:///usr/lib/python2.7/urllib2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -670,13 +456,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/api/tests.py" />
     <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/rest_framework/generics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -684,14 +464,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/api/admin.py" />
     <entry file="file://$PROJECT_DIR$/ebay/ebay.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -709,69 +482,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ebay/ebay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="48" column="82" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="58" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="11" selection-end-column="58" />
+        <state relative-caret-position="-75">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="108" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="108" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/message.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/api/models.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/serializers.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/message.txt" />
     <entry file="file://$PROJECT_DIR$/ebay/send_email.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="e#25#39#0" expanded="true" />
-          </folding>
+          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="21" column="42" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="21" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangorest/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/djangorest/api/views.py" />
+    <entry file="file://$PROJECT_DIR$/djangorest/api/urls.py" />
   </component>
 </project>

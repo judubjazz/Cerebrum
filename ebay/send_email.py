@@ -5,7 +5,6 @@ import email
 
 from string import Template
 
-
 MY_ADDRESS = 'julienguite3@hotmail.com'
 PASSWORD = 'GUIJUL22'
 
@@ -21,38 +20,39 @@ def read_template(filename):
     return Template(template_file_content)
 
 
-def send_email(element_a_envoye):
+def send_email(element_a_envoye,url,destination):
 
-    message_template = read_template('message.txt')
+    message_template = read_template('ebay/message.txt')
 
     # add in the actual person name to the message template
-    message = message_template.substitute(PERSON_NAME="julien",ITEM=element_a_envoye)
-
-    # Prints out the message body for our sake
-    print(message)
+    message = message_template.substitute(PERSON_NAME="julien",ITEM=element_a_envoye, URL = url)
 
     # setup the parameters of the message
     msg = email.message_from_string(message)
     msg['From'] = MY_ADDRESS
-    msg['To'] = 'julienguite3@hotmail.com'
-    msg['Subject'] = "This is TEST"
+    msg['To'] = destination
+    msg['Subject'] = "EBAY WATCHER ALERT"
+
+    print msg
 
     # set up the SMTP server
     s = smtplib.SMTP(host='smtp-mail.outlook.com', port=587)
+    print "smtp is ok"
     s.ehlo()  # Hostname to send for this command defaults to the fully qualified domain name of the local host.
+    print "s.elho() is ok"
     s.starttls()
+    print "s.starttls is ok"
     s.ehlo()  # Hostname to send for this command defaults to the fully qualified domain name of the local host.
+    print "s.elho 2 is ok"
     s.login(MY_ADDRESS, PASSWORD)
+    print "s.login is ok"
 
     # send the message via the server set up earlier.
     s.sendmail(MY_ADDRESS, MY_ADDRESS, msg.as_string())
+    print "s.sendmail is ok"
     # s.send_message(msg)
     del msg
 
     # Terminate the SMTP session and close the connection
     s.quit()
     print "email envoyé"
-
-
-if __name__ == '__main__':
-    send_email()
