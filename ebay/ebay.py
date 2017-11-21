@@ -1,16 +1,40 @@
 from ebaysdk import finding
 from ebaysdk.finding import Connection as finding
 import send_email
-import threading
+from threading import Event, Thread
+import time
 
 
-def hello_world():
-    threading.Timer(10.0, hello_world).start() # called every minute
-    print("Hello, World!")
+class RepeatedTimer:
+
+    """Repeat `function` every `interval` seconds."""
+
+    def __init__(self, interval, function, *args, **kwargs):
+        self.interval = interval
+        self.function = function
+        self.args = args
+        self.kwargs = kwargs
+        self.start = time.time()
+        self.event = Event()
+        self.thread = Thread(target=self._target)
+        self.thread.start()
+
+    def _target(self):
+        while not self.event.wait(self._time):
+            self.function(*self.args, **self.kwargs)
+
+    @property
+    def _time(self):
+        return self.interval - ((time.time() - self.start) % self.interval)
+
+    def stop(self):
+        self.event.set()
+        self.thread.join()
 
 
 def search_ebay(data):
 
+    print data
     email = data['email']
     keywords = data['keywords']
     min_price = data['min_price']
@@ -29,21 +53,28 @@ def search_ebay(data):
         'sortOrder': sort_order
     }
 
-    # a_thread = threading.Timer(60.0, search_ebay).start()  # called every minute
+    # called every minute
+    timer = RepeatedTimer(30.0, search_ebay, data)
 
     api = finding(siteid='EBAY-US', appid='juliengu-carte-PRD-fec73a437-365ab89a')
 
     api.execute('findItemsAdvanced', json_request)
 
-    dictstr = api.response.dict()
+    response = api.response.dict()
 
-    print dictstr['ack']
-    ack = dictstr['ack']
+    print response
+    print response['ack']
 
-    if ack != 'Failure':
-        element_a_envoye = dictstr['searchResult']['item'][1]['title']
-        item_url = dictstr['searchResult']['item'][1]['viewItemURL']
-        print dictstr['searchResult']['item'][1]
-        send_email.send_email(element_a_envoye,item_url, email)
-        # a_thread.cancel()
+    ack = response['ack']
+
+    if ack == 'Success':
+
+        if response['searchResult']['_count'] != '0':
+
+            timer.stop()
+            element_a_envoye = response['searchResult']['item'][1]['title']
+            item_url = response['searchResult']['item'][1]['viewItemURL']
+            print response['searchResult']['item'][1]
+            send_email.send_email(element_a_envoye,item_url, email)
+
 
