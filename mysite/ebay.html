@@ -51,52 +51,82 @@
 			<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
 				<i class="icon-settings"></i>
 			</a>
-		</div>      <ul class="nav navbar-nav hidden-xs">
+		</div>      
+		<ul class="nav navbar-nav hidden-xs">
 			<li>
 				<a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
 					<i class="fa fa-indent text"></i>
 					<i class="fa fa-dedent text-active"></i>
-
 				</a>
 			</li>
 		</ul>
-
-		<form class="navbar-form navbar-right input-s-lg m-t m-l-n-xs hidden-xs" role="search">
-
+		<form action="results.html" class="navbar-form navbar-right input-s-lg m-t m-l-n-xs hidden-xs" role="search">
 			<div class="form-group">
 				<div class="input-group">
-
 					<span class="input-group-btn">
-						<button type="submit" onclick="onclickButton()" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
+						<button type="submit" onclick=onclickButton() class="btn btn-sm bg-white btn-icon rounded">
+							<i class="fa fa-search"></i>
+						</button>
 					</span>
 					<input id="searchText" type="text" class="form-control input-sm no-border rounded">
-
 				</div>
 			</div>
 		</form>
 	</header>
-
 </section>
 
-   <div class="container ">
-
-		<div class="row"> 
-			<!-- /.col-lg-3 -->
-			<aside class="aside-md bg-black dk col-lg-3  sidebar"   >
-
-				 <div id="gh-cat-box" width="100%" class=""><select aria-label="Select a category for search" class="gh-sb gh-sprRetina" size="1" id="gh-cat" name="_sacat"><option value="0">All Categories</option><option value="20081">Antiques</option><option value="550">Art</option><option value="2984">Baby</option><option value="267">Books</option><option value="12576">Business &amp; Industrial</option><option value="625">Cameras &amp; Photo</option><option value="15032">Cell Phones &amp; Accessories</option><option value="11450">Clothing, Shoes &amp; Accessories</option><option value="11116">Coins &amp; Paper Money</option><option value="1">Collectibles</option><option value="58058">Computers/Tablets &amp; Networking</option><option value="293">Consumer Electronics</option><option value="14339">Crafts</option><option value="237">Dolls &amp; Bears</option><option value="11232">DVDs &amp; Movies</option><option value="6000">eBay Motors</option><option value="45100">Entertainment Memorabilia</option><option value="172008">Gift Cards &amp; Coupons</option><option value="26395">Health &amp; Beauty</option><option value="11700">Home &amp; Garden</option><option value="281">Jewelry &amp; Watches</option><option value="11233">Music</option><option value="619">Musical Instruments &amp; Gear</option><option value="1281">Pet Supplies</option><option value="870">Pottery &amp; Glass</option><option value="10542">Real Estate</option><option value="316">Specialty Services</option><option value="888">Sporting Goods</option><option value="64482">Sports Mem, Cards &amp; Fan Shop</option><option value="260">Stamps</option><option value="1305">Tickets &amp; Experiences</option><option value="220">Toys &amp; Hobbies</option><option value="3252">Travel</option><option value="1249">Video Games &amp; Consoles</option><option value="99">Everything Else</option></select></div>
-
-			</aside>
-      
-        <div class="col-sm-6">
-
+<div class="container ">
+	<div class="row"> 
+		<!-- /.col-lg-3 -->
+		<aside class="aside-md bg-black dk col-lg-3  sidebar"   >
+			 <div id="gh-cat-box" width="100%" class="">
+				 <select aria-label="Select a category for search" class="gh-sb gh-sprRetina" size="1" id="gh-cat" name="_sacat">
+					 <option value="0">All Categories</option>
+					 <option value="20081">Antiques</option>
+					 <option value="550">Art</option>
+					 <option value="2984">Baby</option>
+					 <option value="267">Books</option>
+					 <option value="12576">Business &amp; Industrial</option>
+					 <option value="625">Cameras &amp; Photo</option>
+					 <option value="15032">Cell Phones &amp; Accessories</option>
+					 <option value="11450">Clothing, Shoes &amp; Accessories</option>
+					 <option value="11116">Coins &amp; Paper Money</option>
+					 <option value="1">Collectibles</option>
+					 <option value="58058">Computers/Tablets &amp; Networking</option>
+					 <option value="293">Consumer Electronics</option>
+					 <option value="14339">Crafts</option>
+					 <option value="237">Dolls &amp; Bears</option>
+					 <option value="11232">DVDs &amp; Movies</option>
+					 <option value="6000">eBay Motors</option>
+					 <option value="45100">Entertainment Memorabilia</option>
+					 <option value="172008">Gift Cards &amp; Coupons</option>
+					 <option value="26395">Health &amp; Beauty</option>
+					 <option value="11700">Home &amp; Garden</option>
+					 <option value="281">Jewelry &amp; Watches</option>
+					 <option value="11233">Music</option>
+					 <option value="619">Musical Instruments &amp; Gear</option>
+					 <option value="1281">Pet Supplies</option>
+					 <option value="870">Pottery &amp; Glass</option>
+					 <option value="10542">Real Estate</option>
+					 <option value="316">Specialty Services</option>
+					 <option value="888">Sporting Goods</option>
+					 <option value="64482">Sports Mem, Cards &amp; Fan Shop</option>
+					 <option value="260">Stamps</option>
+					 <option value="1305">Tickets &amp; Experiences</option>
+					 <option value="220">Toys &amp; Hobbies</option>
+					 <option value="3252">Travel</option>
+					 <option value="1249">Video Games &amp; Consoles</option>
+					 <option value="99">Everything Else</option>
+				 </select>
+			</div>
+		</aside>  
+		<div class="col-sm-6">
 			<div id="carouselExampleIndicators" class="carousel slide " width="50%" data-ride="carousel">
 				<ol class="carousel-indicators">
 				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 				</ol>
-
 				<div class="carousel-inner" role="listbox" id="containerImage">
 					<div class="item active">
 						<img class="d-block img-fluid" src="images/image1.jpg" alt="First slide">
@@ -119,14 +149,8 @@
 					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 				</a>
-
-			</div>
-			
-			
-		</div>
-			
-		<div id="results"></div>	
-          
+			</div>	
+		</div>			          
 		<aside class="aside-md bg-black dk col-lg-3 sidebar "  >       
 			<div class="well">
 				<p>Prix</p>
@@ -167,11 +191,23 @@
 					 <option value="Washigton Capitals">Washigton Capitals</option>
 				 </select>
 				</div>
-		  </div>
+			</div>
 		</aside>       
 	</div>
    
-	<input type="button" class="btn btn-lg btn-primary launch-modal" onclick="createTextConfirmation() " value="Confirmation">
+	<a class="clickMe" href=alerteActive.html>Voir mes alertes actives</a>
+	<style>
+	.clickMe {
+		-moz-appearance: button;
+		-ms-appearance: button;
+		-o-appearance: button;
+		-webkit-appearance: button;
+		appearance: button;
+		text-decoration: none;
+		color: #000;
+		padding: 0.2em 0.4em;
+	}
+	</style>
     
     <!-- Modal HTML -->
     <div id="confirmModal" class="modal fade">
@@ -181,8 +217,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title">Confirmation</h4>
                 </div>
-                <div class="modal-body confirme">
-                    
+                <div class="modal-body confirme">     
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
@@ -190,33 +225,21 @@
             </div>
         </div>
     </div>
+	
+<!--fin container -->	
 </div>
 
-	
-	
 	
 <script >
 																					  
 function onclickButton(){
+	var keywords=$("#searchText").val();
+	localStorage.setItem('keywords', keywords);
+}
 
-	var searchText=$("#searchText").val();
-
-	var url = "http://svcs.ebay.com/services/search/FindingService/v1";
-		url += "?OPERATION-NAME=findItemsByKeywords";
-		url += "&SERVICE-VERSION=1.0.0";
-		url += "&SECURITY-APPNAME=imanmifd-test-PRD-d5d7a0307-c7e94659";
-		url += "&GLOBAL-ID=EBAY-US";
-		url += "&RESPONSE-DATA-FORMAT=JSON";
-		url += "&callback=_cb_findItemsByKeywords";
-		url += "&REST-PAYLOAD";
-		url += "&keywords=" + searchText;
-		url += "&paginationInput.entriesPerPage=3";
-	  //*  url += "&sortOrder="+this.state.sort_order;
-	 //   url += urlfilter;
-
-		s=document.createElement('script'); // create script element
-		s.src= url;
-		document.body.appendChild(s);
+function voirAlerteActive(){
+	var keywords=$("#searchText").val();
+	localStorage.setItem('keywords', keywords);
 }
 						   
 						   
@@ -320,8 +343,8 @@ function showSideBar() {
     }
 
 }
-    $("#searchText").keyup(showSideBar);
-    $(".sidebar").hide();
+$("#searchText").keyup(showSideBar);
+$(".sidebar").hide();
     
 
 </script>
