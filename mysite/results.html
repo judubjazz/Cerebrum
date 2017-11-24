@@ -20,24 +20,24 @@
     <!-- Custom styles for this template -->
   
 <style>
-#containerImage {
-    height: 400px;
-    width:100%;
-}
-#containerImage.imgCarousel{
-  height:100%;
-  width:100%;
+	#containerImage {
+		height: 400px;
+		width:100%;
+	}
+	#containerImage.imgCarousel{
+	  height:100%;
+	  width:100%;
 
-}
-.well.equipe{
-  width: 75%;
-}
- .container {
-    padding-top: 70px;
-  }
-  #sidebar{
-     padding-top: 30px;
-  }
+	}
+	.well.equipe{
+	  width: 75%;
+	}
+	 .container {
+		padding-top: 70px;
+	  }
+	  #sidebar{
+		 padding-top: 30px;
+	  }
 </style>	
 </head>
 	
@@ -65,23 +65,67 @@
 		document.body.appendChild(s);
 	
 function _cb_findItemsByKeywords(root) {
+	console.log(root.findItemsByKeywordsResponse[0].searchResult[0]);
 	
-	var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
-	  var html = [];
-	  html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
-	  for (var i = 0; i < items.length; ++i) {
-		var item     = items[i];
-		var title    = item.title;
-		var pic      = item.galleryURL;
-		var viewitem = item.viewItemURL;
-		if (null != title && null != viewitem) {
-		  html.push('<tr><td>' + '<img src="' + pic + '" border="0">' + '</td>' +
-		  '<td><a href="' + viewitem + '" target="_blank">' + title + '</a></td></tr>');
+	if (root.findItemsByKeywordsResponse[0].searchResult[0].item){
+		var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
+		var html = [];
+		html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
+
+		for (var i = 0; i < items.length; ++i) {
+			var item     = items[i];
+			var title    = item.title;
+			var pic      = item.galleryURL;
+			var viewitem = item.viewItemURL;
+
+			console.log(items)  
+			if (null != title && null != viewitem) {
+			  html.push('<tr><td>' + '<img src="' + pic + '" border="0">' + '</td>' +
+			  '<td><a href="' + viewitem + '" target="_blank">' + title + '</a></td></tr>');
+			}
 		}
-	  }
-	  html.push('</tbody></table>');
-	  document.getElementById("results").innerHTML = html.join("");
-} 	
+		html.push('</tbody></table>');
+		document.getElementById("results").innerHTML = html.join("");
+	}else {
+		console.log('aucun element trouve');
+		if (window.confirm("Aucun élement trouvé! \n Voulez-vous sauver la recherche sur la base de données?") == true) {
+			postOnDataBase();
+		} else {
+			window.location='ebay.html';
+		}
+	}
+}
+
+function postOnDataBase(){
+	fetch('https://xoxoxo.localtunnel.me/snippets/', {
+                method: 'POST',
+                headers: {
+                    'Accept': '*/*',
+                    'Content-Type': '*/*',
+                    'Authorization': 'Token e3ee5d525aa8e785a76104d1da8f393b284503b3'
+                },
+                body: JSON.stringify({
+                    'email':'ggg@ggg.com',
+                    'keywords': localStorage.getItem('keywords'),
+                    'condition': '',
+                    'sort_order': '',
+                    'min_price': '',
+                    'max_price': '',
+                    'currency': 'USD',
+                })
+            })
+                .then(result => result.json())
+                .catch(error => {
+                    console.log('erreur ' + error.stack);
+                })
+                .then((response) => {
+                    console.log('bonsoir   ' + response);
+                    if (response !== undefined){
+                        console.log("reponse undefined")
+                    }
+
+                })
+}
 </script>
 
 
