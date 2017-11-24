@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Carte de hockey</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="src/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="src/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="src/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="src/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="src/css/font.css" type="text/css" />
+  <link rel="stylesheet" href="src/css/app.css" type="text/css" />  
+
+    <!-- Custom styles for this template -->
+  
+<style>
+#containerImage {
+    height: 400px;
+    width:100%;
+}
+#containerImage.imgCarousel{
+  height:100%;
+  width:100%;
+
+}
+.well.equipe{
+  width: 75%;
+}
+ .container {
+    padding-top: 70px;
+  }
+  #sidebar{
+     padding-top: 30px;
+  }
+</style>	
+</head>
+	
+<body>
+	<h1>
+		<div id="results"></div>
+	</h1>	
+</body>	
+	
+<script >
+	var url = "http://svcs.ebay.com/services/search/FindingService/v1";
+		url += "?OPERATION-NAME=findItemsByKeywords";
+		url += "&SERVICE-VERSION=1.0.0";
+		url += "&SECURITY-APPNAME=imanmifd-test-PRD-d5d7a0307-c7e94659";
+		url += "&GLOBAL-ID=EBAY-US";
+		url += "&RESPONSE-DATA-FORMAT=JSON";
+		url += "&callback=_cb_findItemsByKeywords";
+		url += "&REST-PAYLOAD";
+		url += "&keywords=hat";
+		url += "&paginationInput.entriesPerPage=3";
+	
+		s=document.createElement('script'); // create script element
+		s.src= url;
+		document.body.appendChild(s);
+	
+function _cb_findItemsByKeywords(root) {
+	
+	var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
+	  var html = [];
+	  html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
+	  for (var i = 0; i < items.length; ++i) {
+		var item     = items[i];
+		var title    = item.title;
+		var pic      = item.galleryURL;
+		var viewitem = item.viewItemURL;
+		if (null != title && null != viewitem) {
+		  html.push('<tr><td>' + '<img src="' + pic + '" border="0">' + '</td>' +
+		  '<td><a href="' + viewitem + '" target="_blank">' + title + '</a></td></tr>');
+		}
+	  }
+	  html.push('</tbody></table>');
+	  document.getElementById("results").innerHTML = html.join("");
+} 	
+	
+function onclickButton(){
+
+	var searchText=$("#searchText").val();
+
+	var url = "http://svcs.ebay.com/services/search/FindingService/v1";
+		url += "?OPERATION-NAME=findItemsByKeywords";
+		url += "&SERVICE-VERSION=1.0.0";
+		url += "&SECURITY-APPNAME=imanmifd-test-PRD-d5d7a0307-c7e94659";
+		url += "&GLOBAL-ID=EBAY-US";
+		url += "&RESPONSE-DATA-FORMAT=JSON";
+		url += "&callback=_cb_findItemsByKeywords";
+		url += "&REST-PAYLOAD";
+		url += "&keywords=" + searchText;
+		url += "&paginationInput.entriesPerPage=3";
+	  //*  url += "&sortOrder="+this.state.sort_order;
+	 //   url += urlfilter;
+
+		s=document.createElement('script'); // create script element
+		s.src= url;
+		document.body.appendChild(s);
+}
+</script>
+
+
+</html>
