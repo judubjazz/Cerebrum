@@ -237,45 +237,7 @@ function onclickButton(){
 	localStorage.setItem('keywords', keywords);
 }
 
-function voirAlerteActive(){
-	var keywords=$("#searchText").val();
-	localStorage.setItem('keywords', keywords);
-}
-						   
-						   
-function _cb_findItemsByKeywords(root) {
-	
-/*if(!root.findItemsByKeywordsResponse[0].searchResult[0].IsEmpty()) {
-		alert("La recherche ne marche pas");
-    return;
-	
-  }
-*/
-	
-  var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
-
-  if (items.length==0) {
-  document.getElementById("results").innerHTML ="O resultat  trouve";
-    return;
-  }
-	
-  var html = [];
-  html.push('<table class= "table"><tbody>');
-	
-  for (var i = 0; i < items.length; ++i) {
-    var item     = items[i];
-    var title    = item.title;
-    var pic      = item.galleryURL;
-    var viewitem = item.viewItemURL;
-    if (null != title && null != viewitem) {
-      html.push('<tr><td>' + '<img src="' + pic + '">' + '</td>' +
-      '<td><a href="' + viewitem + '" target="_blank">' + title + '</a></td></tr>');
-    }
-  } 
-  html.push('</tbody></table>');
-  document.getElementById("results").innerHTML = html.join("");
-} 
-	
+						  						  	
 function buildURLArray (){
       let filterarray = [
 				{"name":"MaxPrice",
