@@ -136,9 +136,7 @@
 						<img class="d-block img-fluid" src="images/image3.jpg" alt="Third slide">
 					</div>
 
-					<div class="item">
-						<img class="d-block img-fluid" src="images/Gretzky_statue.jpg"  alt="Third slide">
-					</div>				
+			
 				</div>
 
 				<a class="left carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -160,10 +158,10 @@
 				<input  type="text" name="_udhi" size="6" value="" title="Saisissez une fourchette de prix maximum" id="max_price">$
 			</div>
 
-			<div class="well">
+			<div class="well condition" >
 				<p>Etat</p>
-				<label for="LH_ItemConditionNew"><input type="checkbox">Neuf</label><br>
-				<label for="LH_ItemConditionUsed"><input type="checkbox" id="LH_ItemConditionUsed"  class="condition" value="4"> D'occasion</label><br>
+				<label for="LH_ItemConditionNew"><input type="checkbox" id="LH_ItemConditionNew" value= "New" >Neuf</label><br>
+				<label for="LH_ItemConditionUsed"><input type="checkbox" id="LH_ItemConditionUsed"  class="condition" value="Used"> D'occasion</label><br>
 			</div>
 
 			<div class="well">
@@ -234,46 +232,30 @@
 																					  
 function onclickButton(){
 	var keywords=$("#searchText").val();
+	var max_price=$("#max_price").val();
+	var min_price=$("#min_price").val();
+	var condition_neuf=$('#LH_ItemConditionNew:checked').val();
+	var condition_usage=$('#LH_ItemConditionUsed:checked').val();
+	
+	
+	console.log(keywords);
+	console.log(max_price);
+	console.log(condition_neuf);
+	
+	if (min_price === undefined || min_price === ''){
+		localStorage.setItem('min_price', 1);
+	}else {
+		localStorage.setItem('min_price', min_price);
+	}
+	
 	localStorage.setItem('keywords', keywords);
+	localStorage.setItem('max_price', max_price);
+	localStorage.setItem('condition_neuf', condition_neuf);
+	localStorage.setItem('condition_usage', condition_usage);
 }
 
 						  						  	
-function buildURLArray (){
-      let filterarray = [
-				{"name":"MaxPrice",
-				"value":this.state.max_price,
-				"paramName":"Currency",
-				"paramValue":"USD"},
-				{"name":"MinPrice",
-				"value":this.state.min_price,
-				"paramName":"Currency",
-				"paramValue":"USD"},
-				{"name":"Condition",
-				"value":this.state.condition,
-				}
-            ];
 
-      if (this.state.max_price === ''){filterarray.shift();}
-      // Iterate through each filter in the array
-      for(let i=0; i < filterarray.length; i++) {
-        //Index each item filter in filterarray
-        let itemfilter = filterarray[i];
-        // Iterate through each parameter in each item filter
-        for(let index in itemfilter) {
-          // Check to see if the paramter has a value (some don't)
-          if (itemfilter[index] !== "") {
-            if (itemfilter[index] instanceof Array) {
-              for(let r = 0; r < itemfilter[index].length; r++) {
-              let value = itemfilter[index][r];
-              urlfilter += "&itemFilter\(" + i + "\)." + index + "\(" + r + "\)=" + value ;
-              }
-            }else {
-              urlfilter += "&itemFilter\(" + i + "\)." + index + "=" + itemfilter[index];
-            }
-          }
-        }
-      }
-  };
 
 																	
 function createTextConfirmation () {
