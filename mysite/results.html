@@ -39,12 +39,46 @@
 		 padding-top: 30px;
 	  }
 </style>	
+
 </head>
 	
 <body>
-	<h1>
-		<div id="results"></div>
-	</h1>	
+	<section>
+	<header class="bg-black header header-md navbar navbar-fixed-top-xs">
+		<div class="navbar-header aside bg-info nav-xs">
+
+
+			<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+				<i class="icon-settings"></i>
+			</a>
+		</div>      
+		<ul class="nav navbar-nav hidden-xs">
+			<li>
+				<a ref="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted clickMe bg-black" href="alerteActive.html">Voir mes alertes actives</a>
+
+				
+			</li>
+		</ul>
+		<form action="results.html" class="navbar-form navbar-right input-s-lg m-t m-l-n-xs hidden-xs" role="search">
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-btn">
+						<button type="submit" onclick=onclickButton() class="btn btn-sm bg-white btn-icon rounded">
+							<i class="fa fa-search"></i>
+						</button>
+					</span>
+					<input id="searchText" type="text" class="form-control input-sm no-border rounded">
+				</div>
+			</div>
+		</form>
+	</header>
+</section>
+
+	<div class="container">
+		<h3>
+		<div id="results" ></div>
+	</h3>
+	</div>	
 </body>	
 	
 <script >
@@ -116,7 +150,7 @@ function _cb_findItemsByKeywords(root) {
 	if (root.findItemsByKeywordsResponse[0].searchResult[0].item){
 		var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
 		var html = [];
-		html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
+		html.push('<table class=" table table-bordred"><tbody>');
 		console.log(items[0]);
 		for (var i = 0; i < items.length; ++i) {
 			var item     = items[i];
@@ -127,8 +161,8 @@ function _cb_findItemsByKeywords(root) {
 
 			console.log(items)  
 			if (null != title && null != viewitem) {
-			  html.push('<tr><td>' + '<img src="' + pic + '" border="0">' + '</td>' +
-			  '<td><a href="' + viewitem + '" target="_blank">' + title + "  "+ price + '</a></td></tr>');
+			  html.push('<tr><td>' + '<img src="' + pic + '" >' + '</td>' +
+			  '<td><a href="' + viewitem + '" target="_blank">' + title + " "+ price +'</td></tr>');
 			}
 		}
 		html.push('</tbody></table>');
