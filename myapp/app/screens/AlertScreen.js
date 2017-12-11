@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity,Alert} from 'react-native';
 import {email} from 'react-native-communications'
 import {Button} from 'react-native-elements'
 
@@ -20,9 +20,6 @@ export default class AlertScreen extends Component {
       show_text:false,
     };
   }
-    showText = () => {
-        this.setState({show_text:true})
-    };
 
     getNavigationParams= () => {return this.props.navigation.state.params || {}};
 
@@ -58,10 +55,12 @@ export default class AlertScreen extends Component {
             })
                 .then(result => result.json())
                 .catch(error => {
-                    console.log('bonjour ' + error.stack);
+                    console.log('erreur ' + error.stack);
+                    let message_erreur = 'connection problem';
+                    Alert.alert('Alert Title', message_erreur, [{text: 'OK', onPress: () => console.log('OK Pressed')},], { cancelable: false })
                 })
                 .then((response) => {
-                    console.log('bonsoir   ' + response);
+                    console.log('response   ' + response);
                     if (response !== undefined){
                         this.setState({show_text: true});
                         console.log("show_text_false")
@@ -81,7 +80,7 @@ export default class AlertScreen extends Component {
         } else {
             return null;
         }
-    }
+    };
 
     componentDidMount(){
       let params = this.getNavigationParams

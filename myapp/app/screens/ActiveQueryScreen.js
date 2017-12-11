@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { View, Text, FlatList, ActivityIndicator, Linking, Button, Alert } from "react-native";
 import { List, ListItem, SearchBar } from "react-native-elements";
-import styles from '/home/ju/PycharmProjects/myapp/styles/styles.js';
+import styles from '../styles/styles.js';
 import Mailer from 'react-native-mail';
+import Swipeout from 'react-native-swipeout';
 
-let url_filter = "";
-let url = "";
 
 export default class FlatListDemo extends Component {
   constructor(props) {
@@ -18,6 +17,7 @@ export default class FlatListDemo extends Component {
       error: null,
       refreshing: false,
       email:this.props.navigation.state.params.email,
+      activeRowKey: null,
     };
   }
   // handleRefresh = () => {
@@ -68,6 +68,26 @@ export default class FlatListDemo extends Component {
     );
   };
 
+  deletePost = (index, item) => {
+      console.log(item);
+      let id = item.id;
+      console.log('voici le it  ' + id);
+
+      fetch('https://xoxoxo.localtunnel.me/snippets/' + id + '/', {
+                method: 'DELETE',
+                headers: {
+                    'Accept': '*/*',
+                    'Authorization': 'Token e3ee5d525aa8e785a76104d1da8f393b284503b3'
+                }
+            })
+                .then(result => result.json())
+                .catch(error => {
+                    console.log('erreur ' + error.stack);
+                    let message_erreur = 'connection problem';
+                    Alert.alert('Alert Title', message_erreur, [{text: 'OK', onPress: () => console.log('OK Pressed')},], { cancelable: false })
+                })
+  };
+
   componentDidMount() {
     const {page} = this.state;
     this.setState({ loading: true });
@@ -76,7 +96,7 @@ export default class FlatListDemo extends Component {
       .then((res) => res.json())
       .catch((error) => {this.setState({ error, loading: false });})
       .then((response) => {
-          console.log(response);
+
           this.setState({
               data: page === 1 ? response : [...this.state.data, ...response],
               error: response.error || null,
@@ -87,19 +107,51 @@ export default class FlatListDemo extends Component {
   }
 
   render() {
+
     return (
+
       <List containerStyle={{ borderTopWidth: 0, borderBottomWidth: 0 }}>
         <FlatList
           data={this.state.data}
-          renderItem={({ item }) => (
-            <ListItem
-              roundAvatar
-              title={item.keywords}
-              subtitle={'min price : ' + item.min_price + ' max price :' + item.max_price + ' condition : ' + item.condition }
-              avatar={{ uri: 'https://www.gravatar.com/avatar/'}}
-              containerStyle={{ borderBottomWidth: 0 }}
-              // onPress={() => Linking.openURL(item.viewItemURL[0])}
-            />
+          renderItem={({ index, item }) => (
+              <Swipeout
+                autoclose={true}
+                onClose={() => {if (this.state.activeRowKey !== null){this.setState({activeRowKey:null});} }}
+                onOpen={() => {this.setState({activeRowKey:item.id})}}
+                right={[
+                {
+                    onPress: () => {
+                        Alert.alert(
+                            'Alert',
+                            'Are you sure you want to delete?',
+                            [
+                                {text:'No', onPress: () => console.log('Cancel, Pressed')},
+                                {text: 'Yes', onPress: () => {
+                                    this.state.data.splice(index,1);
+                                    this.setState({activeRowKey: null});
+                                    this.deletePost(index, item);
+                                }}
+                            ],
+                            {cancelable: true}
+                            );
+                    },
+                    text: 'Delete', type: 'delete'
+                }
+                 ]}
+                rowId={index}
+                backgroundColor={'transparent'}
+
+              >
+                <ListItem
+                  roundAvatar
+                  title={item.keywords}
+                  subtitle={'min price : ' + item.min_price + ' max price :' + item.max_price + ' condition : ' + item.condition }
+                  avatar={{ uri: 'https://www.gravatar.com/avatar/'}}
+                  containerStyle={{ borderBottomWidth: 0 }}
+                  item={item}
+                  index={index}
+                />
+              </Swipeout>
           )}
           keyExtractor={item => item.id}
           ItemSeparatorComponent={this.renderSeparator}

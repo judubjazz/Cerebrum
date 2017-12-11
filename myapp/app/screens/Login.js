@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Container from '/home/ju/PycharmProjects/myapp/src/components/Container.js';
-import MyButton from '/home/ju/PycharmProjects/myapp/src/components/MyButton.js';
-import Label from '/home/ju/PycharmProjects/myapp/src/components/Label.js';
-import { Root, Tabs } from '/home/ju/PycharmProjects/myapp/app/config/router.js';
+import Container from '../components/Container.js';
+import MyButton from '../components/MyButton.js';
+import Label from '../components/Label.js';
 import { NavigationActions } from 'react-navigation'
 import {StyleSheet, Text, View, TextInput, ScrollView, Alert} from 'react-native';
 import {Button} from 'react-native-elements'
@@ -68,7 +67,7 @@ export default class Login extends Component {
           .then(result => result.json())
           .catch(error => {
                   console.log('login():Error Stack2: ' + error.stack);
-                  let message_erreur = 'problem connection';
+                  let message_erreur = 'connection problem';
                   Alert.alert('Alert Title', message_erreur, [{text: 'OK', onPress: () => console.log('OK Pressed')},], { cancelable: false })
               }
           )

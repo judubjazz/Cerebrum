@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, FlatList, ActivityIndicator, Linking, Button, Alert } from "react-native";
 import { List, ListItem, SearchBar } from "react-native-elements";
-import styles from '/home/ju/PycharmProjects/myapp/styles/styles.js';
+import styles from '../styles/styles.js';
 import Mailer from 'react-native-mail';
 
 let url_filter = "";
@@ -73,8 +73,8 @@ class FlatListDemo extends Component {
     url += "&RESPONSE-DATA-FORMAT=JSON";
     url += "&REST-PAYLOAD";
     url += "&keywords=" + this.state.keywords;
-    url += "&paginationInput.entriesPerPage=3";
-    url += "&sortOrder="+this.state.sort_order;
+    url += "&paginationInput.entriesPerPage=4";
+    url += "&sortOrder=" + this.state.sort_order;
     url += url_filter;
   };
 
@@ -169,7 +169,7 @@ class FlatListDemo extends Component {
       <List containerStyle={{ borderTopWidth: 0, borderBottomWidth: 0 }}>
         <FlatList
           data={this.state.data}
-          renderItem={({ item }) => (
+          renderItem={({item }) => (
             <ListItem
               roundAvatar
               title={item.title[0]}
@@ -179,7 +179,7 @@ class FlatListDemo extends Component {
               onPress={() => Linking.openURL(item.viewItemURL[0])}
             />
           )}
-          keyExtractor={item => item.itemId}
+          keyExtractor={item => item.id}
           ItemSeparatorComponent={this.renderSeparator}
           ListHeaderComponent={this.renderHeader}
           ListFooterComponent={this.renderFooter}

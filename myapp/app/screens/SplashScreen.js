@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Animated, Text, View, StyleSheet, Image, Dimensions, TouchableHighlight } from 'react-native';
-import MyButton from '/home/ju/PycharmProjects/myapp/src/components/MyButton.js';
+import MyButton from '../components/MyButton.js';
 
 class FadeInView extends Component {
   state = {
@@ -41,7 +41,7 @@ export default class SplashScreen extends Component {
       <View style={styles.container}>
         <FadeInView style={{backgroundColor: 'transparent'}}>
           <TouchableHighlight onPress={() => this.props.navigation.navigate('Login')}>
-                 <Image style={ styles.item } source = {require('/home/ju/PycharmProjects/myapp/src/cute_ball_time.png')}/>
+                 <Image style={ styles.item } source = {require('../components/cute_ball_time.png')}/>
           </TouchableHighlight>
         </FadeInView>
       </View>

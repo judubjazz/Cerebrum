@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '/home/ju/PycharmProjects/myapp/styles/styles.js';
+import styles from '../styles/styles.js';
 import {ScrollView, TextInput, View, Picker, ToolbarAndroid, Text} from 'react-native';
 import _ from 'lodash'
 import { NavigationActions } from 'react-navigation'

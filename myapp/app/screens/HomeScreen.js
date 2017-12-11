@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '/home/ju/PycharmProjects/myapp/styles/styles.js';
+import styles from '../styles/styles.js';
 import { NavigationActions } from 'react-navigation'
 import {Text, View,} from 'react-native';
 import { Button } from 'react-native-elements'
@@ -12,7 +12,7 @@ export default class HomeScreen extends Component {
   getParams= () => {
       if (this.props.navigation.state.params === undefined){
         return ''
-    }else{
+      }else{
           return this.props.navigation.state.params.email
       }
   };
@@ -36,17 +36,17 @@ export default class HomeScreen extends Component {
               title="Sell on Ebay"
               style={styles.buttonStyle}
             />
-          <Button
+            <Button
               backgroundColor={'dodgerblue'}
               borderRadius={20}
               large
               onPress={() => navigate('BuyScreen', {email:this.props.navigation.state.params.email})}
               title="Buy on Ebay"
               style={styles.buttonStyle}
-          />
+            />
         </View>
 
-          <Button
+        <Button
               containerViewStyle={styles.container}
               backgroundColor={'dodgerblue'}
               borderRadius={5}
@@ -54,7 +54,7 @@ export default class HomeScreen extends Component {
               onPress={() => navigate('ActiveQueryScreen', {email:this.props.navigation.state.params.email})}
               title="See Active Alert"
               style={styles.buttonStyle}
-            />
+        />
 
       </View>
     );
