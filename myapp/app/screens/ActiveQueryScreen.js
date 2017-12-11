@@ -83,8 +83,7 @@ export default class FlatListDemo extends Component {
                 .then(result => result.json())
                 .catch(error => {
                     console.log('erreur ' + error.stack);
-                    let message_erreur = 'connection problem';
-                    Alert.alert('Alert Title', message_erreur, [{text: 'OK', onPress: () => console.log('OK Pressed')},], { cancelable: false })
+
                 })
   };
 
