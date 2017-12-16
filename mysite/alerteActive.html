@@ -54,7 +54,7 @@ fetch('https://xoxoxo.localtunnel.me/snippets/')
 		.then((response) => {
 		console.log(response);
 	 	var html = [];
-	  	html.push('<table width="100%" border="0" cellspacing="0" cellpadding="3"><tbody>');
+	  	html.push('<table class = "table"><tbody>');
 	  	for (var i = 0; i < response.length; ++i) {
 			var item     = response[i];
 			console.log(item)
@@ -64,7 +64,7 @@ fetch('https://xoxoxo.localtunnel.me/snippets/')
 			console.log(keywords)
 
 			if (null != keywords) {
-			  html.push('<tr><td>' +'<img src="https://www.gravatar.com/avatar/" border="0">" + </td>' +
+			  html.push('<tr><td>' +'<img src="https://www.gravatar.com/avatar/" >" + </td>' +
 			  '<td style="background-color:#FFFFFF">' + keywords + ' min price : '+ min_price + '$, max price : '+ max_price +'$ </td></tr>');
 			}
 	 	 }
